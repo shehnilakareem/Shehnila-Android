@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tutor</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tip">You must\'ve balance to get verification code*</string>
+    <string name="skip">Try another way</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="instruction">To get employment instantly, you should fill this form honestly</string>
+    <string name="instructiontwo">Fill your academic form</string>
+    <string name="Fname">First name</string>
+    <string name="lname">Last name</string>
+    <string name="hintStudFname">Enter student first name here</string>
+    <string name="hintStudLname">Enter student last name here</string>
+    <string name="pFname">Parent/carer first name</string>
+    <string name="plname">Parent/carer last name</string>
+    <string name="hintpLname">Enter parent/carer first name here</string>
+    <string name="hintpFname">Enter parent/carer last name here</string>
+    <string name="date">Date</string>
+    <string name="spinner_title">Select</string>
+
+</resources>

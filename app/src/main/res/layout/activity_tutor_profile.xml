@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainScroll">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/toolbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarlayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/firstTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="@string/instruction"
+                android:textColor="@color/blackcolor" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/dpIv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/firstTv"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_bg_edit"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Upload Profile Picture"
+                android:textSize="12dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/studentfname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstTv"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/Fname"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/studentfnameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/studentfname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:hint="Enter your first name"
+                android:paddingLeft="10dp"
+                android:textSize="13dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/studentlname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/studentfnameEdit"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/lname"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+
+            </LinearLayout>
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/studentlnameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/studentlname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:hint="Enter your last name"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstTv"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Gender"
+
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:popupBackground="@null"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/studentlnameEdit"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="City"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+
+            </LinearLayout>
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/cityEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/program_of_studdy"
+                android:layout_marginLeft="20dp"
+                android:hint="Enter your city"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstTv"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Tutor Type"
+
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/tutorType_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:popupBackground="@null"
+
+                />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/qualificationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstTv"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Qualification"
+
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/qualification_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:popupBackground="@null"
+
+                />
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/program_of_studdyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/program_of_studdy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/studentlnameEdit"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Program of study"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+
+            </LinearLayout>
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:id="@+id/program_of_studdyEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/program_of_studdy"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/subject_to_teachLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/subject_to_teach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/studclassEdit"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Subject to Teach"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:id="@+id/subject_to_teachEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/pfname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:hint="Enter Subject you can teach"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+            <LinearLayout
+                android:id="@+id/skillLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/skill_to_teach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/studclassEdit"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Skill/s to Teach"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/skill_to_teachEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/pfname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:hint="Enter skill/s you can teach"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstTv"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Experience"
+
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/experience_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:popupBackground="@null"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pfnameEdit"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:text="Official Phone Number"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:id="@+id/phoneEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/plname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:hint="Enter your official phone number"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/emil"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plnameEdit"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:text="Official Email"
+                android:textColor="@color/blackcolor"
+                android:textSize="17dp" />
+
+            <EditText
+
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/emailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/pemail"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:hint="Enter your official email address"
+                android:paddingLeft="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/absenceDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailEdit"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:text="@string/date"
+                android:textColor="@color/blackcolor"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/absenceDateBtn"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/absenceDate"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="15-May-2018"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/absenceDateBtn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:text="Tution Time duration"
+                android:textColor="@color/blackcolor"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/durationBtn"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/duration"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="1 hour a day"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/available_at"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/absenceDateBtn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:text="Available at"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Morning" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Afternoon" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Evening" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Specific Time" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Any Time" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/introduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/durationBtn"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Introduce yourself"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/introductionEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/introduction"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="90"
+                android:minLines="4"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reasonEdit"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Advice for your students"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(optional)"
+                    android:textColor="@color/colorRed" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/adviceEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/introduction"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_edit_bg"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="90"
+                android:minLines="4"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/signatureIv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="submit"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

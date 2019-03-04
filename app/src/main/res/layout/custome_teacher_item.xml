@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--placeholer color: #7E7F80-->
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/student_pp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/student_placeholder" />
+
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/student_pp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tutor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shehnila Kareem"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tutor_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MSC (2014 - 2016)" />
+
+        <TextView
+            android:id="@+id/residence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multan" />
+
+        <TextView
+            android:id="@+id/availability_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available: Any time" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_pp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/phoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/ic_call_black_24dp" />
+
+        <ImageView
+            android:id="@+id/messagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/ic_message_black_24dp" />
+
+        <ImageView
+            android:id="@+id/favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/ic_favorite_black_24dp" />
+
+        <ImageView
+            android:id="@+id/ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/profesor"
+            android:text="5" />
+
+    </LinearLayout>
+</RelativeLayout>

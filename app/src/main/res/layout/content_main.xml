@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <TextView
+        android:id="@+id/popularTutorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="Popular Tutor &amp; Academies"
+        android:background="@color/darkgrey"
+        />
+    <com.daimajia.slider.library.SliderLayout
+        android:layout_below="@+id/popularTutorLabel"
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        />
+    <LinearLayout
+        android:layout_below="@+id/slider"
+        android:id="@+id/viewlabelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/darkgrey"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/offerstv"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="All Tutors"
+        android:background="@color/darkgrey"
+        />
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/viewall"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical|right"
+        android:layout_marginRight="10dp"
+        android:text="View All"
+        android:layout_gravity="right"
+        android:background="@color/darkgrey"
+        />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToReferesh"
+        android:layout_below="@+id/viewlabelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ListView
+        android:id="@+id/tution_offers"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

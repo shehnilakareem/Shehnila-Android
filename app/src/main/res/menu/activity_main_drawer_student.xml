@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tutor_profile"
+            android:icon="@drawable/profesor"
+            android:title="Tutor Profile" />
+        <item
+            android:id="@+id/nav_student_profile"
+            android:icon="@drawable/lectura"
+            android:title="Student Profile" />
+        <item
+            android:id="@+id/post_tution_offer"
+            android:icon="@drawable/lectura"
+            android:title="Post a Tution Offer" />
+        <item
+            android:id="@+id/nav_advertise"
+            android:icon="@drawable/publicidad"
+            android:title="Advertise With Us" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_switch"
+                android:icon="@drawable/swap"
+                android:title="Switch To Student" />
+    </group>
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseSignupMethodActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Base.ThemeOverlay.AppCompat">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+    <Button
+        android:id="@+id/emailBtn"
+        android:text="Login Throught Email"
+        android:textAllCaps="false"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/phoneBtn"
+        android:text="Register through phone"
+        android:textAllCaps="false"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
